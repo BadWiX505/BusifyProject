@@ -1,0 +1,135 @@
+.Galleryintrosection{
+    background-image: url(../../resources/images/galleryBgImage.jpg);
+}
+
+.galleryimagessection{
+    margin-top: 40px;
+    width: 100%;
+    padding: 3%;
+    background-color: var(--darkWhite);
+    transition: background-color 1s;
+}
+.gallery {
+    margin: 40px 0;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+
+}
+.gallery > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gallery > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.gallery .tall {
+    grid-row: span 2;
+}
+.texttitles{
+    position: relative;
+}
+.texttitles p:first-child{
+    font-family: littletext;
+    color: var(--secondcolor);
+    font-size: 1.5rem;
+}
+
+.texttitles p:last-child{
+    font-family: niceFont;
+    font-size: 2.5rem;
+    color: var(--bigtextcolor);
+}
+
+.texttitles p{
+    margin: 20px 0;
+    text-align: center;
+}
+
+.defaultsvg{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+
+.texttitles .flash{
+    top: -20px;
+    left: 20%;
+}
+.texttitles{
+    overflow-x: hidden;
+}
+.shape1{
+    top: -40px;
+    left: 45%;  
+    animation-delay: 2s;
+}
+
+.shape2{
+    top: 0px;
+    right: 10%;  
+    animation-delay: 10s;
+}
+.shape3{
+    top: -20px;
+    right: 20%;  
+    animation-delay: 12s;
+}
+.texttitles .heart{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    animation-delay: 15s;
+    
+}
+
+.texttitles svg{
+      animation: moveDoodle 100s linear infinite;
+      color: var(--bigtextcolor);
+}
+
+.morechefsbtn{
+    width: 100%;
+    margin-top: 100px;
+    text-align: center;
+}
+.morechefsbtn  a{
+    color: var(--secondcolor);
+    border-radius: 8px;
+    border: 1.3px solid var(--secondcolor);
+    padding: 14px 30px ;
+    font-family: littletext;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.morechefsbtn > a:hover{
+    transform: translateY(-10px);
+}
+
+
+@keyframes moveDoodle {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(50px, 50px);
+    }
+    50% {
+        transform: translate(100px, 0);
+    }
+    75% {
+        transform: translate(50px, -50px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}

@@ -1,0 +1,255 @@
+.menusection > h3{
+    margin-top:  20px ;
+    color: var(--secondcolor);
+    font-family: navFont;
+    text-align: center;
+}
+
+.menusection > h1{
+    font-family: niceFont;
+    font-size: 2.6rem;
+    text-align: center;
+    margin-top:  20px ;
+    color: var( --bigtextcolor);
+}
+
+.menusection{
+    background-color: var(--thirdcolor);
+    padding: 100px 0;
+    position: relative;
+    z-index: 1;
+    transition: background-color 1s;
+}
+
+.menusbigelectors{
+    display: grid;
+    width: 100%;
+    padding: 0 40px;
+    grid-template-columns: repeat(6,1fr);
+    margin-top: 20px;
+    height: 100px;
+    position: relative;
+    z-index: 3;
+}
+.menusbigelectors button{
+    background-color: var(--darkWhite);
+    border: none;
+    box-shadow: 0 0 3px var(--normaltextcolor) ;
+    font-family: foodname;
+    font-size: 1.7rem;
+    cursor: pointer;
+    transition: .2s;
+    color: var( --menuselectorscolor );
+}
+
+.menusbigelectors button:hover{
+  background-color: var(--secondcolor);
+  color: white;
+}
+.Menucontainer{
+  position: relative;
+  margin-top: 70px;
+}
+.subitems{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4,1fr);
+    height: 50px;
+    padding: 0 60px;
+    transform:  translateX(-50%);
+    z-index: -2;
+    position: absolute;
+      top: 0 ;
+      left: 50%;
+    transition: .5s;
+}
+
+.subitems  button{
+    background-color: var(--darkWhite );
+    border: none;
+    box-shadow: 0 0 3px var(--normaltextcolor) ;
+    font-family: littletext;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: .2s;
+    color: var( --menuselectorscolor );
+    
+}
+
+.totalcart{
+    width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--bgresposivenavcolor);
+  color: white;
+  position: fixed;
+  right: 20px;
+  top: 70%;
+  z-index: 5000;
+  transform: translateY(-50%);
+  transition: .6s;
+  cursor: pointer;
+}
+.totalcart:hover ~ .card {
+    display: block;
+}
+
+.totalcart:hover{
+    background-color: var(--secondcolor);
+}
+.subitems button:hover{
+    background-color: var(--secondcolor);
+    color: white;
+  }
+
+.menudown{
+    transform: translateY(200%)  translateX(-50%);
+}
+
+#subdessert{
+    grid-template-columns: repeat(3,1fr);
+}
+@media (max-width : 680px){
+ 
+    .menusbigelectors{
+        grid-template-columns: repeat(1,1fr);
+        padding: 2px 50px;
+        height: 600px;
+    }
+    .subitems{
+        grid-template-columns: repeat(1,1fr);
+        height: 200px;
+    }
+    .menudown{
+        transform: translateY(300%)  translateX(-50%);
+    }
+    #subdessert{
+        grid-template-columns: repeat(1,1fr);
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card {
+    padding: 1rem;
+    background-color: var(--darkWhite);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    max-width: 320px;
+    border-radius: 20px;
+    animation: Totalanim;
+    animation-duration: 1s;
+    display: none;
+    position: fixed;
+    top: 67%;
+    right: 7%;
+    z-index: 100000;
+  }
+  
+  .title {
+    display: flex;
+    align-items: center;
+  }
+  
+  .title span {
+    position: relative;
+    padding: 0.5rem;
+    background-color: var(--secondcolor);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 9999px;
+  }
+  
+  .title span svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    height: 1rem;
+  }
+  
+  .title-text {
+    margin-left: 0.5rem;
+    color: var(--bigtextcolor);
+    font-size: 18px;
+  }
+  
+  .percent {
+    margin-left: 0.5rem;
+    color: var(--secondcolor);
+    font-weight: 600;
+    display: flex;
+  }
+  
+  .data {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .data p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: var(--bigtextcolor);
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    text-align: left;
+  }
+  
+  .data .range {
+    position: relative;
+    background-color: #E5E7EB;
+    width: 100%;
+    height: 0.5rem;
+    border-radius: 0.25rem;
+  }
+  
+  .data .range .fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #10B981;
+    width: 76%;
+    height: 100%;
+    border-radius: 0.25rem;
+  }
+
+  @keyframes Totalanim {
+    from {
+      transform: translateY(30px) ;
+      opacity: 0;
+    }
+  
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+ 
+
+  @media (max-width : 740px){
+.card{
+    right: 15%;
+}
+  }

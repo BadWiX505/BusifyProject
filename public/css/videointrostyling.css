@@ -1,0 +1,165 @@
+
+body{
+    background-color: var(--darkWhite);
+}
+.Introsection{
+  width: 100%;
+  height: 690px;
+  position: relative;
+
+}
+.Introsection video{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    object-fit: cover; /* Ensures the video covers the entire container */
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+
+.Introsection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.Introsection .titlecontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.titlecontainer .smalltitle{
+    font-family:littletext;
+    font-size: 1.4rem;
+}
+.titlecontainer .bigtitle{
+  font-family: titlesFont;
+  font-size: 3rem;
+}
+.titlecontainer p{
+    text-align: center;
+}
+.titlecontainer a{
+    padding: 12px;
+    font-family: littletext ;
+    font-size: 1.4rem;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--secondcolor);
+     border: 2px solid var(--secondcolor);
+     transition: color .5s;
+     overflow: hidden;
+     position: relative;
+     z-index: 0;
+}
+.titlecontainer *{
+    margin-top: 20px;
+}
+
+/* -------Hover button --------------- */
+   
+.titlecontainer a:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--secondcolor);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+   }
+   
+   .titlecontainer a:hover {
+    color: #fff;
+   }
+   
+   .titlecontainer a:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+   }
+   
+   .titlecontainer a:hover:before {
+    top: -30px;
+    left: -30px;
+   }
+   
+   .titlecontainer a:active:before {
+    background: var(--secondcolor);
+    transition:  0s;
+   }
+   /* -------------- End Hover -------------------- */
+    /* ---------- Services ---------- */
+.servicescontainer{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    transform: translateY(-50%);
+    color: var(--bigtextcolor);
+    flex-wrap: wrap;
+}
+
+.servicescontainer > div{
+   width: 200px;
+   background-color: var(--servicesbgcolor);
+   height: 200px;
+   border-radius: 10px;
+   box-shadow: 0 0 3px var(--normaltextcolor);
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+}
+.serviceicon{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--secondcolor);
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.servicescontainer p{
+    font-family: littletext;
+    font-size: 1.5rem;
+}
+
+
+
+
+    /* -------------  EndService ------------------- */
+
+   .statisticsSection {
+    width: 100%;
+    height: 400px;
+   }
+
+   @media (max-width : 804px){
+    .servicescontainer > div{
+        width: 90%;
+        height: 180px;
+        margin: 10px auto;
+    }
+    .servicescontainer{
+        transform: translateY(0);
+        margin: 50px 0 ;
+    }
+    .titlecontainer .bigtitle{
+ font-size: 2.5rem;
+    }
+    .Introsection video{
+        border-bottom-left-radius: 2%;
+        border-bottom-right-radius: 2%;
+    }
+   }
+
+  

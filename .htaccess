@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /RestaurantClient
+
+    RewriteRule ^([0-9a-zA-Z]+)$ index.php?action=$1 [L]
+
+
+    # Add more rules for other actions as needed
+</IfModule>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Ratings</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="public/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="public/css/Fonts.css">
+
+    <style>
+        /* Custom CSS for styling */
+        .food-item {
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-family: niceFont;
+        }
+
+        h2 {
+            font-family: foodname;
+            margin-top: 10px;
+        }
+
+        .food-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        .star-rating input[type="radio"] {
+            display: none;
+        }
+
+        .star-rating label {
+            font-size: 24px;
+            color: #ccc;
+            cursor: pointer;
+        }
+
+        .star-rating label:hover,
+        .star-rating label:hover~label {
+            color: #ffc700;
+        }
+
+        .star-rating input[type="radio"]:checked~label,
+        .star-rating input[type="radio"]:checked~label:hover~label {
+            color: #ffc700;
+        }
+
+        .btn {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">How was your experience ?</h1>
+        <div class="row">
+            <!-- Food Item 1 -->
+            <div class="col-md-4 food" data-idfood="1">
+                <div class="food-item">
+                    <img src="resources/images/menu-two-1.png" alt="Food 1">
+                    <h2>Food 1</h2>
+                    <div class="star-rating">
+                        <input type="radio" id="star5-food1" name="rating-food1" value="5">
+                        <label for="star5-food1">&#9733;</label>
+                        <input type="radio" id="star4-food1" name="rating-food1" value="4">
+                        <label for="star4-food1">&#9733;</label>
+                        <input type="radio" id="star3-food1" name="rating-food1" value="3">
+                        <label for="star3-food1">&#9733;</label>
+                        <input type="radio" id="star2-food1" name="rating-food1" value="2">
+                        <label for="star2-food1">&#9733;</label>
+                        <input type="radio" id="star1-food1" name="rating-food1" value="1">
+                        <label for="star1-food1">&#9733;</label>
+                    </div>
+                </div>
+            </div>
+            <!-- Food Item 2 -->
+            <div class="col-md-4 food" data-idfood="2">
+                <div class="food-item">
+                    <img src="resources/images/menu-two-2.png" alt="Food 2">
+                    <h2>Hot dog</h2>
+                    <div class="star-rating">
+                        <input type="radio" id="star5-food2" name="rating-food2" value="5">
+                        <label for="star5-food2">&#9733;</label>
+                        <input type="radio" id="star4-food2" name="rating-food2" value="4">
+                        <label for="star4-food2">&#9733;</label>
+                        <input type="radio" id="star3-food2" name="rating-food2" value="3">
+                        <label for="star3-food2">&#9733;</label>
+                        <input type="radio" id="star2-food2" name="rating-food2" value="2">
+                        <label for="star2-food2">&#9733;</label>
+                        <input type="radio" id="star1-food2" name="rating-food2" value="1">
+                        <label for="star1-food2">&#9733;</label>
+                    </div>
+                </div>
+            </div>
+            <!-- Food Item 3 -->
+            <div class="col-md-4 food" data-idfood="3">
+                <div class="food-item">
+                    <img src="resources/images/menu-two-4.png" alt="Food 3">
+                    <h2>Food 3</h2>
+                    <div class="star-rating">
+                        <input type="radio" id="star5-food3" name="rating-food3" value="5">
+                        <label for="star5-food3">&#9733;</label>
+                        <input type="radio" id="star4-food3" name="rating-food3" value="4">
+                        <label for="star4-food3">&#9733;</label>
+                        <input type="radio" id="star3-food3" name="rating-food3" value="3">
+                        <label for="star3-food3">&#9733;</label>
+                        <input type="radio" id="star2-food3" name="rating-food3" value="2">
+                        <label for="star2-food3">&#9733;</label>
+                        <input type="radio" id="star1-food3" name="rating-food3" value="1">
+                        <label for="star1-food3">&#9733;</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Comment Form -->
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <h2>Leave a Comment:</h2>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="3" placeholder="Leave a comment"
+                            maxlength="150"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary send"
+                        style="background-color: var(--secondcolor); border: none;">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    reviews = {};
+
+         $('.send').on("click",()=>{
+        $('.food').each(function (index, element) {
+            var idfood = $(this).data('idfood');
+
+            var rating = $(this).find('input[type="radio"]:checked').val();
+             reviews[idfood]=rating;
+        })
+        reviews['comment'] = $('textarea').val();
+       console.log(reviews)
+         })
+     
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+@font-face {
+    font-family: littletext;
+    src: url(../../resources/Fonts/regular.ttf);
+}
+@font-face {
+    font-family: titlesFont;
+    src: url(../../resources/Fonts/TitlesFonts.ttf);
+}
+@font-face {
+    font-family: niceFont;
+    src: url(../../resources/Fonts/niceFont.ttf);
+}
+@font-face {
+    font-family: foodname;
+    src: url(../../resources/Fonts/foodname.ttf);
+}
+
+@font-face {
+    font-family: navfont;
+    src: url(../../resources/Fonts/navfont.ttf);
+  }

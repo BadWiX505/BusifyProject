@@ -1,0 +1,71 @@
+.spinnercontainer{
+    background-color: rgba(0,0,0,0.4);
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    display: none;
+    
+}
+.spinnercontainer .spinnerbtns{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.spinnercontainer .spinnerbtns button:first-child{
+    background-color: var(--secondcolor);
+    color: #fff;
+
+}
+.spinnercontainer .spinnerbtns button{
+    border-style: none;
+    padding: 10px;
+    font-family: littletext;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.spinnercontainer p{
+    color: white;
+    font-family: littletext;
+    font-size: 1.5rem;
+   
+}
+
+
+#spinner{
+    padding: 10px 30px ;
+    border-radius: 10px;
+    background-color: #fff;
+    font-size: 1.4rem;
+    margin: 10px 0;
+    font-family: littletext;
+    position: relative;
+}
+
+#spinner > button{
+position: absolute;
+font-size: .9rem;
+cursor: pointer;
+border: none;
+background-color: transparent;
+}
+
+#spinner > #spinnerUp{
+    right: 3px;
+    top: 3px;
+}
+
+#spinner > #spinnerDown{
+    right: 3px;
+    bottom:  3px;
+}
+

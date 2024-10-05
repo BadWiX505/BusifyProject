@@ -1,0 +1,191 @@
+
+.aboutintro{
+    background: url(../../resources/images/aboutbg.jpg);
+}
+.breadcrumb-area{
+    margin: 10px;
+    background: url(../../resources/images/about.jpg);
+    padding: 343px 0 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+}
+
+.breadcrumb-area .container h1{
+    font-family: navfont;
+    font-size: 2.6rem;
+    text-align: center;
+    margin-top:  20px ;
+}
+
+/* les contact */
+
+.contact{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    transform: translateY(-50%);
+    flex-wrap: wrap;
+}
+
+.contact > div{
+    width: 300px;
+    background-color:var(--thirdcolor);
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px var(--secondcolor);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+ }
+
+.contact-icon{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--secondcolor);
+    color: #fff;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.contact p{
+    font-family: littletext;
+    font-size: 1.5rem;
+    color: var(--bigtextcolor);
+}
+
+.contact h3{
+    font-family: littletext;
+    font-size: 1.5rem;
+}
+
+.contact-icon:hover > i{
+    transform: scale(1.1);
+}
+.contact-icon:hover{
+    background-color: #000;
+}
+
+            #about-section {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 80px 12%;
+            }
+            .about-left img{
+                width: 300px;
+                height: auto;
+                border-radius: 20px;
+            }
+            .about-right {
+                width: 500px;
+            }
+
+            .about-right ul li {
+                display: flex;
+                align-items: center;
+            }
+
+            .about-right h1 {
+                color: var(--secondcolor);
+                margin-bottom: 5px;
+                padding: 10px 0;
+                font-size: 3rem;
+                font-weight: 100;
+                font-family: niceFont;
+            }
+
+            .about-right p {
+                color: var( --normaltextcolor);
+                line-height: 26px;
+                font-size: 15px;
+                font-family: littletext;
+                font-size: 1.1rem;
+            }
+
+            .about-right .address {
+                margin: 25px 0;
+            }
+
+            .about-right .address ul li {
+                margin-bottom: 5px;
+            }
+
+            .address .address-logo {
+                margin-right: 15px;
+                color: var(--secondcolor);
+            }
+
+            .address .saprater {
+                margin: 0 35px;
+            }
+
+            .about-right .expertise ul {
+                width: 80%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            
+            #about-section button{
+                padding: 14px 30px;
+                background-color: transparent;
+                color: var(--secondcolor);
+                font-family: littletext;
+                font-size: 1.1rem;
+                border: 2px solid var(--secondcolor);
+                margin-top: 20px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+
+
+
+
+    @media (max-width : 1024px){
+        .about-right {
+            width: 300px;
+          }  
+    
+    }
+
+     @media (max-width : 804px){
+          
+        #about-section {
+        flex-direction: column;
+        }
+        .about-right {
+          margin-top: 30px;
+          width: 100%;
+        }
+    }
+
+@media (max-width : 804px){
+    .contact > div{
+        width: 90%;
+        height: 180px;
+        margin: 10px auto;
+    }
+    .contact{
+        transform: translateY(0);
+        margin: 50px 0 ;
+    }
+}
+
+
+
+

@@ -1,0 +1,232 @@
+
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+.form-container {
+    width: 400px;
+    height: 254px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+  }
+  .lock-icon {
+    font-size: 20px;
+    color: var(--secondcolor);
+  }
+  .form {
+    width: 100%;
+    height: 100%;
+    padding: 20px 15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    box-sizing: border-box;
+    color: #0e2954;
+    position: relative;
+  }
+  .toggle-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  .form-title {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 25px;
+    color: var(--secondcolor);
+    font-weight: 700;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+  .form-sub-title {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+      
+  }
+  .login-card,
+  .password-card {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-top: 25px;
+    gap: 10px;
+    align-items: flex-end;
+    position: absolute;
+    width: calc(100% - 30px);
+    transition: all 0.3s ease-in-out;
+    bottom: 20px;
+  }
+  .login-card {
+    left: 15px;
+  }
+  .password-card {
+    left: 100%;
+  }
+  .field-container {
+    border: 1px solid #a7a7a7;
+    border-radius: 8px;
+    width: 100%;
+    height: 45px;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  .input {
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: transparent;
+    position: relative;
+    z-index: 11;
+  }
+  .placeholder {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #a7a7a7;
+    transition: all 0.3s ease;
+    font-size: 16px;
+  }
+  .input:focus ~ .placeholder,
+  .input:not(:placeholder-shown) ~ .placeholder {
+    top: 5px;
+    transform: none;
+    font-size: 12px;
+  }
+  .input:focus,
+  .input:not(:placeholder-shown) {
+    height: 68%;
+  }
+  .btn {
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+    background: var(--secondcolor);
+    border: none;
+    outline: none;
+  }
+  .btn:focus {
+    box-shadow: none;
+  }
+  
+  .btn-label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .excl{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: red;
+    width: 17px;
+    height: 17px;
+    z-index: 1000;
+    display: none;
+  }
+
+  .anim{
+    animation: shaking;
+    animation-duration: .5s;
+    border: 2px solid red;
+  }
+  
+  @keyframes shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+
+  .svgloader {
+    width: 3.25em;
+    display: none;
+     transform-origin: center;
+    animation: rotate4 2s linear infinite;
+    position: fixed;
+    border-radius: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   }
+   
+   circle {
+   fill: none;
+   stroke: rgb(250 204 21);
+   stroke-width: 5;
+   stroke-dasharray: 1, 200;
+   stroke-dashoffset: 0;
+   stroke-linecap: round;
+   animation: dash4 1.5s ease-in-out infinite;
+   }
+   
+   @keyframes rotate4 {
+   100% {
+   transform: rotate(360deg)  translate(-50%,-50%);
+   
+   }
+   }
+
+   @keyframes dash4 {
+    0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    }
+    
+    50% {
+    stroke-dasharray: 90, 200;
+    stroke-dashoffset: -35px;
+    }
+    
+    100% {
+    stroke-dashoffset: -125px;
+    }
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    input:-webkit-autofill:active{
+        -webkit-background-clip: text;
+        transition: background-color 5000s ease-in-out 0s;
+        box-shadow: inset 0 0 0px 0px #23232329;
+    }
+
+    input::placeholder {
+      color: transparent; /* Hide the placeholder text */
+  }
+  
+  /* Show the placeholder when input is focused */
+    input:focus::placeholder {
+      color: #aaa; /* Change placeholder color */
+  }
+  
+  /* Add a smooth transition for the placeholder */
+   input::placeholder {
+      transition: color 0.2s ease-in-out;
+  }

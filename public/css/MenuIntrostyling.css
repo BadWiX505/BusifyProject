@@ -1,0 +1,190 @@
+
+.Menuintrosection {
+    width: 100%;
+    height: 500px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url(../../resources/images/menubgimage.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.Title {
+    font-family: titlesFont;
+    font-size: 3rem;
+}
+
+.littletext {
+    font-family: littletext;
+    font-size: 1.4rem;
+}
+
+
+.promotionscontainer {
+    background-color: var(--darkWhite);
+    margin-top: 20px;
+}
+
+.newsection_imagesformenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    overflow: auto;
+    transition: .4s ease;
+    scroll-behavior: smooth;
+}
+
+.newsection_imagesformenu>div{
+    width: 300px;
+    height: 400px;
+    margin: 0 20px;
+    max-width: 300px !important;
+    flex-shrink: 0;
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: .4s ease;
+}
+
+.newsection_imagesformenu>div img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: fill;
+    border-radius: 15px;
+    transition: .4s ease-in;
+
+}
+.newsection_imagesformenu > div:hover img{
+    transform: scale(1.1);
+}
+.newsection_imagesformenu > div::after{
+    display: none;
+}
+.newsection_imagesformenu > div::before{
+  display: none;
+}
+
+.newsection_imagesformenu>div div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+    font-family: navfont;
+    line-height: 1.5;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transform: translateY(0);
+    padding: 20px;
+    text-align: center;
+    transition: .4s ease-in-out;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.newsection_imagecontent>div:hover {
+    border: none;
+    border-radius: 15px;
+}
+
+.newsection_imagecontent > div:hover img{
+    border-radius: 0px;
+}
+
+.newsection_imagesformenu>div:hover div {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.newsection_imagesformenu>div:hover .promofooddescription {
+    transform: translateY(0);
+}
+
+.newsection_imagesformenu>div:hover .linestyle {
+    width: 96%;
+}
+
+.newsection_imagesformenu .categorie {
+    font-family: littletext;
+    font-size: 1rem;
+    color: var(--secondcolor);
+    text-transform: uppercase;
+
+}
+
+.newsection_imagesformenu .linestyle {
+    width: 50%;
+    height: 1.5px;
+    background: #fff;
+    margin-top: 30px;
+    transition: .4s;
+}
+
+.newsection_imagesformenu .promofooddescription {
+    font-family: littletext;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    width: 96%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    transform: translateY(80px);
+    transition: .4s;
+}
+
+.newsection_imagesformenu  .promotionticket{
+    display: inline-block;
+    padding: 20px;
+    align-items:center;
+    border-radius: 8px;
+    color: #fff;
+    border: 2px solid #fff;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: littletext;
+    font-size: 1.4rem;
+    z-index: 10;
+    transform-origin: 0 0;
+    animation: blakamovement;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+
+.newsection_imagesformenu  .promotionticket::after{
+    content: '';
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    top: 3px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+@keyframes blakamovement {
+      from{
+        transform: rotate(-20deg) translateX(-50%);
+        color: #fff;
+        border: 2px solid #fff;
+      }
+      to{
+        transform: rotate(20deg) translateX(-50%);
+        border: 2px solid var(--secondcolor);
+        color: var(--secondcolor);
+      }
+}

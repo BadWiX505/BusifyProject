@@ -1,0 +1,88 @@
+
+.menuitems{
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--thirdcolor);
+    padding-bottom: 80px;
+    position: relative;
+    transition: background-color 1s;
+}
+
+.menuitems .dishescontainer{
+    width: 261px;
+    margin-left: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    background-color: var(--menuitemsbgcolor);
+}
+
+.dishescontainer .foodimgcontainer{
+    width: 100%;
+    height: 159px;
+}
+.dishescontainer .foodimgcontainer img{
+ object-fit: fill;
+ width: 100%;
+ height: 100%;
+ border-radius: 10px 10px 0 0;
+}
+
+.dishescontainer h2{
+    font-family: foodname;
+    font-weight: 100;
+    font-size: 1.9rem;
+    margin: 10px 0;
+    color: var( --bigtextcolor);
+    padding: 0 10px;
+}
+
+
+.dishescontainer .foodcategorie{
+    font-family: littletext;
+    margin: 10px 0;
+    padding: 0 15px;
+    color: var(--secondcolor);
+    text-transform: lowercase;
+}
+
+.dishescontainer .starscontainer{
+    padding: 0 10px;
+    margin: 10px 0;
+    color: var(--secondcolor);
+}
+
+.dishescontainer .fooddescription{
+    padding: 10px 10px;
+    font-family: littletext;
+    color: var(--normaltextcolor);
+    line-height: 1.5;
+}
+.dishescontainer .priceandaddbtn{
+   display: flex;
+   justify-content: space-between;
+   padding: 10px;
+   font-family: niceFont;
+   font-size: 1.4rem;
+   color: var(--bigtextcolor);
+}
+
+.dishescontainer .priceandaddbtn button{
+    padding: 8px;
+    border-radius: 50%;
+    color: var(--secondcolor);
+    border: 2px solid var(--secondcolor);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@media (max-width : 680px){
+    .menuitems{
+    padding: 80px 0;
+    }
+    .menuitems .dishescontainer{
+   width: 300px;
+    }
+}

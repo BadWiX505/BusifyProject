@@ -1,0 +1,163 @@
+.chefsSection{
+    padding: 100px 30px;
+    background-color: var(--thirdcolor);
+    transition: background-color 1s;
+}
+
+.chefsSection > h3{
+    margin-top:  50px ;
+    color: var(--secondcolor);
+    font-family: navFont;
+    text-align: center;
+}
+
+.chefsSection > h1{
+    font-family: niceFont;
+    font-size: 2.6rem;
+    text-align: center;
+    margin-top:  20px ;
+    color: var( --bigtextcolor);
+}
+
+.chefscontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    transition: 1s all;
+}
+
+.chefscontainer .chefbox{
+    width: 320px;
+    height: 390px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 1px var(--normaltextcolor);
+    opacity: 0;
+}
+.chefscontainer .chefbox img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    transition: .3s;
+}
+
+.chefscontainer .chefbox:hover img{
+    transform: scale(1.1);
+}
+
+.chefscontainer .chefinfos{
+   position: absolute;
+   height: 35%;
+   width: 100%;
+   bottom: 0;
+   left: 0;
+   background-color: var(--chefbgcolor);
+   border-radius: 0 0 15px 15px;
+   transition: background-color 1s;
+
+   text-align: center
+}
+
+.chefscontainer .chefinfos .chefname{
+    font-family: niceFont ;
+    font-size: 1.8rem;
+    color: var(--bigtextcolor);
+}
+
+.chefscontainer .chefinfos > *{
+   margin-top: 15px;
+}
+.chefscontainer .chefinfos .chefgrade{
+    font-family: littletext;
+     color: var(--secondcolor);
+     font-size: 1.1rem;
+}
+
+.chefscontainer .chefinfos > div{
+    display: flex;
+    align-items: center;
+   justify-content: center;
+   width: 100%;
+}
+
+.chefscontainer .chefinfos > div span{
+    width: 27px;
+    height: 27px;
+    background-color: var(--secondcolor);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+    transition: .5s ease;
+}
+
+.chefscontainer .chefinfos > div span:hover{
+    transform: translateY(-20%);
+}
+
+.chefscontainer .chefbox:nth-child(1){
+    animation-delay: 0;
+}
+.chefscontainer .chefbox:nth-child(2){
+    animation-delay: 0.2s;
+}
+.chefscontainer .chefbox:nth-child(3){
+    animation-delay: 0.4s;
+}
+.morechefsbtn{
+    width: 100%;
+    margin-top: 100px;
+    text-align: center;
+}
+.morechefsbtn  a{
+    color: var(--secondcolor);
+    border-radius: 8px;
+    border: 1.3px solid var(--secondcolor);
+    padding: 14px 30px ;
+    font-family: littletext;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.morechefsbtn > a:hover{
+    transform: translateY(-10px);
+}
+
+   
+
+
+@media (max-width : 1030px){
+    .chefscontainer .chefbox{
+        margin-top: 40px;
+    }
+}
+
+.animation{
+animation: animatechefs;
+animation-duration: 1s ;
+animation-fill-mode: forwards;
+}
+
+@keyframes animatechefs{
+ from{
+transform: translateX(-100%);
+opacity: 0;
+ }
+ to{
+    transform: translateX(0%);
+    opacity: 1;
+ }
+}
+
+@media (max-width : 1988px){
+    .chefscontainer .chefbox{
+        margin-top: 40px;
+    }
+}
